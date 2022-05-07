@@ -86,12 +86,12 @@
         //Show Modal Box
         $(document).on("click", ".edit-btn", function() {
             $("#modal").show();
-            var studentId = $(this).data("eid");
+            var adminId = $(this).data("eid");
             $.ajax({
                 url: "ajax-adminupdate.php",
                 type: "POST",
                 data: {
-                    id: studentId
+                    id: adminId
                 },
                 success: function(data) {
                     $("#modal-form table").html(data);
